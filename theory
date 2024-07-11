@@ -1,4 +1,4 @@
----------------------------index.js----------------------------------------------
+--------------------------------index.js----------------------------------------------
 
 1.Load Environment Variables:
 
@@ -112,4 +112,189 @@ return router: Returns the router object which contains all the defined routes.
 export default routes;
 
 export default routes: Exports the routes function as the default export of the module. This allows other parts of the application to import and use these routes.
+
+-----------------------user.route.js----------------------------
+
+1.Importing Modules:
+
+import express from 'express';
+import * as userController from '../controllers/user.controller';
+import { newUserValidator } from '../validators/user.validator';
+import { userAuth } from '../middlewares/auth.middleware';
+
+express: The main framework used to create the server.
+userController: Imports all the exported functions from user.controller.js as userController.
+newUserValidator: A middleware function to validate the request data for creating a new user.
+userAuth: A middleware function to authenticate users.
+
+2.Creating a Router Instance:
+
+const router = express.Router();
+
+express.Router(): Creates a new router object to handle routes.
+
+3.Defining Routes:
+
+//route to get all users
+router.get('', userController.getAllUsers);
+
+//route to create a new user
+router.post('', newUserValidator, userController.newUser);
+
+//route to get a single user by their user id
+router.get('/:id', userAuth, userController.getUser);
+
+//route to update a single user by their user id
+router.put('/:id', userController.updateUser);
+
+//route to delete a single user by their user id
+router.delete('/:id', userController.deleteUser);
+
+router.get('', userController.getAllUsers):
+
+Handles GET requests to the root of this route (e.g., /users).
+Calls userController.getAllUsers to handle the logic.
+
+router.post('', newUserValidator, userController.newUser):
+
+Handles POST requests to the root of this route.
+Uses newUserValidator to validate the request body.
+Calls userController.newUser to handle the logic.
+
+router.get('/
+', userAuth, userController.getUser):
+
+Handles GET requests to /users/:id, where :id is a dynamic parameter.
+Uses userAuth middleware to authenticate the user.
+Calls userController.getUser to handle the logic.
+
+router.put('/
+', userController.updateUser):
+
+Handles PUT requests to /users/:id to update a user by ID.
+Calls userController.updateUser to handle the logic.
+
+router.delete('/
+', userController.deleteUser):
+
+Handles DELETE requests to /users/:id to delete a user by ID.
+Calls userController.deleteUser to handle the logic.
+
+4.Exporting the Router:
+
+export default router;
+
+export default router: Exports the router object so it can be used in other parts of the application, like the main application file where all routes are registered.
+
+--------------------------------controllers/user.controller.js----------------------
+
+1.Importing Required Modules
+
+import HttpStatus from 'http-status-codes';
+import * as UserService from '../services/user.service';
+import { log } from 'winston';
+
+HttpStatus: This module provides constants for HTTP status codes (e.g., 200 for OK, 404 for Not Found).
+UserService: This imports all functions from the user.service.js file as UserService.
+winston: A logging library, although it is not used in the current code.
+
+Controller Functions
+
+1. Get All Users
+
+export const getAllUsers = async (req, res, next) => {
+  try {
+    const data = await UserService.getAllUsers();
+    res.status(HttpStatus.OK).json({
+      code: HttpStatus.OK,
+      data: data,
+      message: 'All users fetched successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+getAllUsers: This function handles the GET request to retrieve all users.
+UserService.getAllUsers: Calls the service function to get the data.
+res.status(HttpStatus.OK).json(...): Sends a response with status code 200 and the retrieved data.
+next(error): Passes any errors to the next middleware function for error handling.
+
+2. Get Single User
+
+export const getUser = async (req, res, next) => {
+  try {
+    const data = await UserService.getUser(req.params.id);
+    res.status(HttpStatus.OK).json({
+      code: HttpStatus.OK,
+      data: data,
+      message: 'User fetched successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+getUser: Handles the GET request to retrieve a single user by ID.
+UserService.getUser(req.params.id): Calls the service function with the user ID from the request parameters.
+res.status(HttpStatus.OK).json(...): Sends a response with status code 200 and the retrieved user data.
+
+3. Create New User
+
+export const newUser = async (req, res, next) => {
+  try {
+    const data = await UserService.newUser(req.body);
+    res.status(HttpStatus.CREATED).json({
+      code: HttpStatus.CREATED,
+      data: data,
+      message: 'User created successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+newUser: Handles the POST request to create a new user.
+UserService.newUser(req.body): Calls the service function with the request body containing user data.
+res.status(HttpStatus.CREATED).json(...): Sends a response with status code 201 and the newly created user data.
+
+4. Update User
+
+export const updateUser = async (req, res, next) => {
+  try {
+    const data = await UserService.updateUser(req.params.id, req.body);
+    res.status(HttpStatus.ACCEPTED).json({
+      code: HttpStatus.ACCEPTED,
+      data: data,
+      message: 'User updated successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+updateUser: Handles the PUT request to update an existing user by ID.
+UserService.updateUser(req.params.id, req.body): Calls the service function with the user ID and the updated data.
+res.status(HttpStatus.ACCEPTED).json(...): Sends a response with status code 202 and the updated user data.
+
+5. Delete User
+
+export const deleteUser = async (req, res, next) => {
+  try {
+    await UserService.deleteUser(req.params.id);
+    res.status(HttpStatus.OK).json({
+      code: HttpStatus.OK,
+      data: [],
+      message: 'User deleted successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+deleteUser: Handles the DELETE request to delete a user by ID.
+UserService.deleteUser(req.params.id): Calls the service function with the user ID.
+res.status(HttpStatus.OK).json(...): Sends a response with status code 200 and an empty data array indicating successful deletion.
+MVC Pattern Explanation
+
 
