@@ -1,0 +1,44 @@
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T06:22:09.242Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T06:22:09.633Z"}
+error: 
+    status - 500 
+    message - ValidationError: "lastName" length must be at least 3 characters long 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-11T06:24:19.585Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T06:27:37.298Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T06:27:37.542Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T06:30:52.321Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T06:30:52.565Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T07:01:15.540Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T07:01:15.757Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T07:01:21.399Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T07:01:21.564Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/users/2 
+      method - GET 
+      IP - ::1
+     {"timestamp":"2024-07-11T07:01:52.826Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T07:03:56.047Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T07:03:56.221Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T07:05:59.269Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T07:05:59.456Z"}
+error: 
+    status - 500 
+    message - ValidationError: "firstName" is required 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-11T07:11:39.311Z"}
+error: 
+    status - 500 
+    message - ValidationError: "firstName" is required 
+    url - /api/v1/users 
+    method - POST 
+    IP - ::1
+   {"timestamp":"2024-07-11T07:32:29.621Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2024-07-11T08:59:10.674Z"}
+info: Connected to the database. {"timestamp":"2024-07-11T08:59:10.845Z"}
