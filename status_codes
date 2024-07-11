@@ -1,0 +1,60 @@
+---------------------------Status codes-------------------------
+
+- **100 CONTINUE**: The server has received the request headers and the client should proceed to send the request body.
+- **101 SWITCHING PROTOCOLS**: The server is switching to the protocol requested by the client.
+- **102 PROCESSING**: The server has received and is processing the request but there is no response yet.
+- **103 EARLY_HINTS**: The server is likely to send a final response with the included headers.
+- **200 OK**: The request was successful.
+- **201 CREATED**: The request was successful and a resource was created.
+- **202 ACCEPTED**: The request has been accepted for processing but not completed.
+- **203 NON_AUTHORITATIVE_INFORMATION**: The request was successful but the information may be from a third-party copy.
+- **204 NO_CONTENT**: The request was successful but there is no content to send in the response.
+- **205 RESET_CONTENT**: The request was successful; reset the document view.
+- **206 PARTIAL_CONTENT**: The server is delivering only part of the resource due to a range header sent by the client.
+- **207 MULTI_STATUS**: Multiple status codes might be appropriate for different parts of the request.
+- **300 MULTIPLE_CHOICES**: The request has more than one possible response.
+- **301 MOVED_PERMANENTLY**: The requested resource has been permanently moved to a new URL.
+- **302 MOVED_TEMPORARILY**: The requested resource has been temporarily moved to a different URL.
+- **303 SEE_OTHER**: The response to the request can be found under a different URL.
+- **304 NOT_MODIFIED**: The resource has not been modified since the last request.
+- **305 USE_PROXY**: The requested resource must be accessed through the proxy given by the location field.
+- **307 TEMPORARY_REDIRECT**: The request should be repeated with another URL, but future requests should still use the original URL.
+- **308 PERMANENT_REDIRECT**: The request should be repeated with another URL and future requests should use the new URL.
+- **400 BAD_REQUEST**: The server could not understand the request due to invalid syntax.
+- **401 UNAUTHORIZED**: The client must authenticate itself to get the requested response.
+- **402 PAYMENT_REQUIRED**: Reserved for future use.
+- **403 FORBIDDEN**: The client does not have access rights to the content.
+- **404 NOT_FOUND**: The server cannot find the requested resource.
+- **405 METHOD_NOT_ALLOWED**: The request method is known by the server but has been disabled and cannot be used.
+- **406 NOT_ACCEPTABLE**: The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.
+- **407 PROXY_AUTHENTICATION_REQUIRED**: The client must authenticate itself with the proxy.
+- **408 REQUEST_TIMEOUT**: The server timed out waiting for the request.
+- **409 CONFLICT**: The request could not be completed due to a conflict with the current state of the resource.
+- **410 GONE**: The resource is no longer available and will not be available again.
+- **411 LENGTH_REQUIRED**: The request did not specify the length of its content, which is required by the requested resource.
+- **412 PRECONDITION_FAILED**: The server does not meet one of the preconditions that the requester put on the request.
+- **413 REQUEST_TOO_LONG**: The request is larger than the server is willing or able to process.
+- **414 REQUEST_URI_TOO_LONG**: The URI provided was too long for the server to process.
+- **415 UNSUPPORTED_MEDIA_TYPE**: The request entity has a media type which the server or resource does not support.
+- **416 REQUESTED_RANGE_NOT_SATISFIABLE**: The client has asked for a portion of the file, but the server cannot supply that portion.
+- **417 EXPECTATION_FAILED**: The server cannot meet the requirements of the Expect request-header field.
+- **418 IM_A_TEAPOT**: The server refuses to brew coffee because it is, permanently, a teapot.
+- **419 INSUFFICIENT_SPACE_ON_RESOURCE**: The server is unable to store the representation needed to complete the request.
+- **420 METHOD_FAILURE**: A deprecated status code indicating that a method has failed.
+- **421 MISDIRECTED_REQUEST**: The server is not able to produce a response for the request's URI.
+- **422 UNPROCESSABLE_ENTITY**: The request was well-formed but unable to be followed due to semantic errors.
+- **423 LOCKED**: The resource that is being accessed is locked.
+- **424 FAILED_DEPENDENCY**: The request failed due to failure of a previous request.
+- **426 UPGRADE_REQUIRED**: The client should switch to a different protocol.
+- **428 PRECONDITION_REQUIRED**: The origin server requires the request to be conditional.
+- **429 TOO_MANY_REQUESTS**: The user has sent too many requests in a given amount of time.
+- **431 REQUEST_HEADER_FIELDS_TOO_LARGE**: The server is unwilling to process the request because its header fields are too large.
+- **451 UNAVAILABLE_FOR_LEGAL_REASONS**: The user-agent requested a resource that cannot legally be provided.
+- **500 INTERNAL_SERVER_ERROR**: The server encountered an unexpected condition.
+- **501 NOT_IMPLEMENTED**: The server does not support the functionality required to fulfill the request.
+- **502 BAD_GATEWAY**: The server was acting as a gateway and received an invalid response from the upstream server.
+- **503 SERVICE_UNAVAILABLE**: The server is not ready to handle the request, usually due to maintenance or overload.
+- **504 GATEWAY_TIMEOUT**: The server was acting as a gateway and did not receive a timely response from the upstream server.
+- **505 HTTP_VERSION_NOT_SUPPORTED**: The server does not support the HTTP protocol version used in the request.
+- **507 INSUFFICIENT_STORAGE**: The server is unable to store the representation needed to complete the request.
+- **511 NETWORK_AUTHENTICATION_REQUIRED**: The client needs to authenticate to gain network access.
