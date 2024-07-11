@@ -1,0 +1,115 @@
+---------------------------index.js----------------------------------------------
+
+1.Load Environment Variables:
+
+import dotenv from 'dotenv';
+dotenv.config();
+
+dotenv: This library loads environment variables from a .env file into process.env.
+dotenv.config(): This line reads the .env file and loads the variables so they can be accessed using process.env.
+
+2. import Required Libraries:
+
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import routes from './routes';
+import { appErrorHandler, genericErrorHandler, notFound } from './middlewares/error.middleware';
+import logger, { logStream } from './config/logger';
+import morgan from 'morgan';
+
+express: The main framework used to create the server.
+cors: Middleware to enable Cross-Origin Resource Sharing, which allows your server to handle requests from different domains.
+helmet: Middleware to enhance security by setting various HTTP headers.
+routes: Custom module that likely exports your application routes.
+error.middlewares: Custom middlewares for handling errors.
+logger: Custom logging module.
+morgan: HTTP request logger middleware for logging requests to the console.
+
+3.Initialize Express Application:
+
+const app = express();
+const host = process.env.APP_HOST;
+const port = process.env.APP_PORT;
+const api_version = process.env.API_VERSION;
+
+app: An instance of the Express application.
+host, port, api_version: Variables loaded from environment variables that define the server host, port, and API version.
+
+4.Apply Middlewares:
+
+app.use(cors());
+app.use(helmet());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(morgan('combined', { stream: logStream }));
+
+cors(): Enables Cross-Origin Resource Sharing.
+helmet(): Adds security-related HTTP headers.
+express.urlencoded({ extended: true }): Parses incoming requests with URL-encoded payloads.
+express.json(): Parses incoming requests with JSON payloads.
+morgan('combined', { stream: logStream }): Logs HTTP requests in the "combined" format to the specified log stream.
+
+5.Register Routes:
+
+app.use(`/api/${api_version}`, routes());
+
+Registers the application's routes, prefixed with /api/<api_version>.
+
+6.Error Handling Middlewares:
+
+app.use(appErrorHandler);
+app.use(genericErrorHandler);
+app.use(notFound);
+
+appErrorHandler: Custom middleware for handling specific application errors.
+genericErrorHandler: Middleware for handling generic errors.
+notFound: Middleware for handling 404 errors when a route is not found.
+
+7.Start the Server:
+
+app.listen(port, () => {
+  logger.info(`Server started at ${host}:${port}/api/${api_version}/`);
+});
+
+Starts the server on the specified port and logs a message indicating that the server has started.
+
+8.Export the App:
+
+export default app;
+
+Exports the Express app instance for use in other parts of the application or for testing purposes.
+
+-----------------------------routes/index.js--------------------------
+
+1.Import Required Modules:
+
+import express from 'express';
+const router = express.Router();
+import userRoute from './user.route';
+
+express: The main framework used to create the server.
+express.Router(): A method in Express used to create modular, mountable route handlers.
+userRoute: Imports the routes related to user operations from the user.route.js file.
+
+2. Define Routes:
+
+const routes = () => {
+  router.get('/', (req, res) => {
+    res.json('Hello Welcome to awesome-project');
+  });
+  router.use('/users', userRoute);
+  return router;
+};
+
+const routes = () => { ... }: This function contains the application's main routing logic.
+router.get('/', (req, res) => { ... }): Defines a GET route at the root URL (/). When accessed, it sends a JSON response with the message "Hello Welcome to awesome-project".
+router.use('/users', userRoute): Mounts the userRoute module at the /users path. This means any routes defined in user.route.js will be accessible under the /users path.
+return router: Returns the router object which contains all the defined routes.
+
+3.Export the Routes:
+
+export default routes;
+
+export default routes: Exports the routes function as the default export of the module. This allows other parts of the application to import and use these routes.
+
