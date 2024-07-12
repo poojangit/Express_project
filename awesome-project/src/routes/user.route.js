@@ -12,12 +12,12 @@ router.get('', userController.getAllUsers);
 router.post('', newUserValidator, userController.newUser);
 
 //route to get a single user by their user id
-router.get('/:id', userAuth, userController.getUser);
+router.get('/:id',  userController.getUser);
 
 //route to update a single user by their user id
 router.put('/:id', userController.updateUser);
 
 //route to delete a single user by their user id
-router.delete('/:id', userController.deleteUser);
+router.delete('/:id',userController.deleteUser);
 
 export default router;

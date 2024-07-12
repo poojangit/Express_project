@@ -1,5 +1,6 @@
 import HttpStatus from 'http-status-codes';
 import jwt from 'jsonwebtoken';
+import { log } from 'winston';
 
 /**
  * Middleware to authenticate if user has a valid Authorization token
@@ -13,6 +14,7 @@ export const userAuth = async (req, res, next) => {
   try {
     let bearerToken = req.header('Authorization');
     if (!bearerToken)
+      // console.error('missing autho token');
       throw {
         code: HttpStatus.BAD_REQUEST,
         message: 'Authorization token is required'
@@ -24,6 +26,7 @@ export const userAuth = async (req, res, next) => {
     res.locals.token = bearerToken;
     next();
   } catch (error) {
+    console.log(error.message)
     next(error);
   }
 };

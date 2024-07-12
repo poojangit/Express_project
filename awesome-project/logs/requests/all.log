@@ -106,3 +106,281 @@ info: ::1 - - [11/Jul/2024:07:32:29 +0000] "POST /api/v1/users HTTP/1.1" 500 60 
 
 info: ::1 - - [11/Jul/2024:07:32:37 +0000] "GET /api/v1/users HTTP/1.1" 200 364 "-" "PostmanRuntime/7.39.0"
 
+error: uncaughtException: EIO: i/o error, write
+Error: EIO: i/o error, write
+    at writeSync (fs.js:679:3)
+    at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at SyncWriteStream.Writable.write (_stream_writable.js:318:11)
+    at Console.log (/home/user/Express_project/awesome-project/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/home/user/Express_project/awesome-project/node_modules/winston-transport/modern.js:82:19)
+    at doWrite (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:302:11) {"date":"Thu Jul 11 2024 20:42:27 GMT+0530 (India Standard Time)","error":{"code":"EIO","errno":-5,"syscall":"write"},"exception":true,"os":{"loadavg":[1.63,1,0.65],"uptime":81506.17},"process":{"argv":["node","/home/user/Express_project/awesome-project/src/index.js"],"cwd":"/home/user/Express_project/awesome-project","execPath":"/usr/bin/node","gid":1000,"memoryUsage":{"arrayBuffers":875463,"external":2892809,"heapTotal":93155328,"heapUsed":64119816,"rss":144891904},"pid":20672,"uid":1000,"version":"v12.22.9"},"stack":"Error: EIO: i/o error, write\n    at writeSync (fs.js:679:3)\n    at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)\n    at doWrite (_stream_writable.js:403:12)\n    at writeOrBuffer (_stream_writable.js:387:5)\n    at SyncWriteStream.Writable.write (_stream_writable.js:318:11)\n    at Console.log (/home/user/Express_project/awesome-project/node_modules/winston/lib/winston/transports/console.js:79:23)\n    at Console._write (/home/user/Express_project/awesome-project/node_modules/winston-transport/modern.js:82:19)\n    at doWrite (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)\n    at writeOrBuffer (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:381:5)\n    at Console.Writable.write (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:302:11)","trace":[{"column":3,"file":"fs.js","function":"writeSync","line":679,"method":null,"native":false},{"column":3,"file":"internal/fs/sync_write_stream.js","function":"SyncWriteStream._write","line":24,"method":"_write","native":false},{"column":12,"file":"_stream_writable.js","function":"doWrite","line":403,"method":null,"native":false},{"column":5,"file":"_stream_writable.js","function":"writeOrBuffer","line":387,"method":null,"native":false},{"column":11,"file":"_stream_writable.js","function":"SyncWriteStream.Writable.write","line":318,"method":"write","native":false},{"column":23,"file":"/home/user/Express_project/awesome-project/node_modules/winston/lib/winston/transports/console.js","function":"Console.log","line":79,"method":"log","native":false},{"column":19,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/modern.js","function":"Console._write","line":82,"method":"_write","native":false},{"column":139,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js","function":"doWrite","line":390,"method":null,"native":false},{"column":5,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js","function":"writeOrBuffer","line":381,"method":null,"native":false},{"column":11,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js","function":"Console.Writable.write","line":302,"method":"write","native":false}]}
+info: ::1 - - [11/Jul/2024:15:32:15 +0000] "GET /api/v1/ HTTP/1.1" 200 9 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:21:57:11 +0000] "GET /api/v1/ HTTP/1.1" 200 9 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:21:58:32 +0000] "GET /api/v1/ HTTP/1.1" 200 34 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:15:24 +0000] "GET /api/v1/ HTTP/1.1" 200 34 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:16:19 +0000] "GET /api/v1/users HTTP/1.1" 200 364 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:17:34 +0000] "POST /api/v1/users HTTP/1.1" 500 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:22:34 +0000] "POST /api/v1/users HTTP/1.1" 201 206 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:22:56 +0000] "GET /api/v1/users HTTP/1.1" 200 513 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:23:43 +0000] "GET /api/v1/users/3 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:24:17 +0000] "GET /api/v1/users/2 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:24:41 +0000] "GET /api/v1/users/2 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:24:57 +0000] "GET /api/v1/users HTTP/1.1" 200 513 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:25:51 +0000] "GET /api/v1/users/:2 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:26:02 +0000] "GET /api/v1/users/2 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:28:34 +0000] "POST /api/v1/2 HTTP/1.1" 404 47 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:28:42 +0000] "POST /api/v1/1 HTTP/1.1" 404 47 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:35:27 +0000] "GET /api/v1/users/2 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:36:10 +0000] "GET /api/v1/users HTTP/1.1" 200 513 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:39:50 +0000] "GET /api/v1 HTTP/1.1" 200 34 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:39:57 +0000] "GET /api/v1/1 HTTP/1.1" 404 47 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:40:06 +0000] "GET /api/v1/users HTTP/1.1" 200 513 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:40:24 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:41:05 +0000] "PUT /api/v1/users/2 HTTP/1.1" 202 122 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:42:12 +0000] "PUT /api/v1/users/3 HTTP/1.1" 202 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:44:21 +0000] "PUT /api/v1/users/3 HTTP/1.1" 202 127 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:45:02 +0000] "GET /api/v1/users/3 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:45:34 +0000] "GET /api/v1/users/2 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:46:53 +0000] "DELETE /api/v1/users/2 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:47:36 +0000] "GET /api/v1/users HTTP/1.1" 200 519 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:48:25 +0000] "DELETE /api/v1/users/2 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [11/Jul/2024:23:48:48 +0000] "GET /api/v1/users HTTP/1.1" 200 519 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:03:54 +0000] "GET /api/v1/ HTTP/1.1" 200 34 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:04:12 +0000] "POST /api/v1/users/2 HTTP/1.1" 404 47 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:04:28 +0000] "POST /api/v1/users HTTP/1.1" 201 206 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:04:45 +0000] "GET /api/v1/users HTTP/1.1" 200 668 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:05:31 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:06:07 +0000] "PUT /api/v1/users/3 HTTP/1.1" 202 129 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:06:15 +0000] "GET /api/v1/users HTTP/1.1" 200 670 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:07:03 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:07:42 +0000] "POST /api/v1/users HTTP/1.1" 201 206 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:09:24 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 500 54 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:09:53 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:10:04 +0000] "GET /api/v1/users HTTP/1.1" 200 819 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:17:10 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:28:11 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:28:29 +0000] "GET /api/v1/users HTTP/1.1" 200 819 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:29:34 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:32:45 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:34:28 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:35:03 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:36:21 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:37:12 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:37:24 +0000] "GET /api/v1/users HTTP/1.1" 200 670 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:39:51 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:40:19 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:45:08 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:46:41 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:00:49:34 +0000] "GET /api/v1/users/1 HTTP/1.1" 400 56 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:01:00:14 +0000] "GET /api/v1/users/1 HTTP/1.1" 200 207 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:01:00:34 +0000] "GET /api/v1/users/3 HTTP/1.1" 200 214 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:13:42 +0000] "POST /api/v1/users HTTP/1.1" 500 132 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:13:56 +0000] "POST /api/v1/users HTTP/1.1" 500 91 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:18:08 +0000] "POST /api/v1/users HTTP/1.1" 500 68 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:29:50 +0000] "POST /api/v1/users HTTP/1.1" 201 227 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:31:00 +0000] "POST /api/v1/users HTTP/1.1" 201 227 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:31:12 +0000] "GET /api/v1/users HTTP/1.1" 200 404 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:48:53 +0000] "POST /api/v1/users HTTP/1.1" 201 228 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:52:08 +0000] "POST /api/v1/users HTTP/1.1" 500 76 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:52:44 +0000] "POST /api/v1/users HTTP/1.1" 201 229 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:53:36 +0000] "POST /api/v1/users HTTP/1.1" 201 229 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:54:49 +0000] "POST /api/v1/users HTTP/1.1" 201 229 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:06:55:29 +0000] "POST /api/v1/users HTTP/1.1" 201 227 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:02:20 +0000] "POST /api/v1/users HTTP/1.1" 201 54 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:25:35 +0000] "POST /api/v1/users HTTP/1.1" 201 54 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:26:27 +0000] "GET /api/v1/ HTTP/1.1" 200 34 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:26:37 +0000] "GET /api/v1/users HTTP/1.1" 200 1261 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:27:32 +0000] "POST /api/v1/users HTTP/1.1" 201 54 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:27:36 +0000] "GET /api/v1/users HTTP/1.1" 200 1261 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:27:55 +0000] "DELETE /api/v1/users/2 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:28:00 +0000] "DELETE /api/v1/users/3 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:28:04 +0000] "DELETE /api/v1/users/0 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:28:15 +0000] "DELETE /api/v1/users/5 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:28:19 +0000] "DELETE /api/v1/users/6 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:07:28:24 +0000] "GET /api/v1/users HTTP/1.1" 200 576 "-" "PostmanRuntime/7.39.0"
+
+error: uncaughtException: EIO: i/o error, write
+Error: EIO: i/o error, write
+    at writeSync (fs.js:679:3)
+    at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at SyncWriteStream.Writable.write (_stream_writable.js:318:11)
+    at Console.log (/home/user/Express_project/awesome-project/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/home/user/Express_project/awesome-project/node_modules/winston-transport/modern.js:82:19)
+    at doWrite (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)
+    at writeOrBuffer (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:381:5)
+    at Console.Writable.write (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:302:11) {"date":"Fri Jul 12 2024 14:38:25 GMT+0530 (India Standard Time)","error":{"code":"EIO","errno":-5,"syscall":"write"},"exception":true,"os":{"loadavg":[2.41,1.23,0.97],"uptime":146062.87},"process":{"argv":["node","/home/user/Express_project/awesome-project/src/index.js"],"cwd":"/home/user/Express_project/awesome-project","execPath":"/usr/bin/node","gid":1000,"memoryUsage":{"arrayBuffers":1411719,"external":3429065,"heapTotal":85827584,"heapUsed":61839672,"rss":138608640},"pid":45651,"uid":1000,"version":"v12.22.9"},"stack":"Error: EIO: i/o error, write\n    at writeSync (fs.js:679:3)\n    at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)\n    at doWrite (_stream_writable.js:403:12)\n    at writeOrBuffer (_stream_writable.js:387:5)\n    at SyncWriteStream.Writable.write (_stream_writable.js:318:11)\n    at Console.log (/home/user/Express_project/awesome-project/node_modules/winston/lib/winston/transports/console.js:79:23)\n    at Console._write (/home/user/Express_project/awesome-project/node_modules/winston-transport/modern.js:82:19)\n    at doWrite (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:390:139)\n    at writeOrBuffer (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:381:5)\n    at Console.Writable.write (/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:302:11)","trace":[{"column":3,"file":"fs.js","function":"writeSync","line":679,"method":null,"native":false},{"column":3,"file":"internal/fs/sync_write_stream.js","function":"SyncWriteStream._write","line":24,"method":"_write","native":false},{"column":12,"file":"_stream_writable.js","function":"doWrite","line":403,"method":null,"native":false},{"column":5,"file":"_stream_writable.js","function":"writeOrBuffer","line":387,"method":null,"native":false},{"column":11,"file":"_stream_writable.js","function":"SyncWriteStream.Writable.write","line":318,"method":"write","native":false},{"column":23,"file":"/home/user/Express_project/awesome-project/node_modules/winston/lib/winston/transports/console.js","function":"Console.log","line":79,"method":"log","native":false},{"column":19,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/modern.js","function":"Console._write","line":82,"method":"_write","native":false},{"column":139,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js","function":"doWrite","line":390,"method":null,"native":false},{"column":5,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js","function":"writeOrBuffer","line":381,"method":null,"native":false},{"column":11,"file":"/home/user/Express_project/awesome-project/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js","function":"Console.Writable.write","line":302,"method":"write","native":false}]}
+info: ::1 - - [12/Jul/2024:09:46:43 +0000] "PUT /api/v1/users/3 HTTP/1.1" 500 89 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:47:03 +0000] "GET /api/v1/users HTTP/1.1" 200 576 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:50:41 +0000] "GET /api/v1/users HTTP/1.1" 200 576 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:50:53 +0000] "PUT /api/v1/users/7 HTTP/1.1" 500 89 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:50:59 +0000] "GET /api/v1/users HTTP/1.1" 200 576 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:51:56 +0000] "GET /api/v1/users/4 HTTP/1.1" 200 229 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:52:03 +0000] "GET /api/v1/users/ HTTP/1.1" 200 576 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:52:45 +0000] "PUT /api/v1/users/7 HTTP/1.1" 500 89 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:53:31 +0000] "PUT /api/v1/users/7 HTTP/1.1" 500 89 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:54:26 +0000] "PUT /api/v1/users/7 HTTP/1.1" 200 37 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:55:24 +0000] "PUT /api/v1/users/7 HTTP/1.1" 500 54 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:56:01 +0000] "POST /api/v1/users HTTP/1.1" 201 229 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:59:26 +0000] "PUT /api/v1/users/8 HTTP/1.1" 200 218 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:59:33 +0000] "GET /api/v1/users/ HTTP/1.1" 200 752 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:09:59:52 +0000] "PUT /api/v1/users/9 HTTP/1.1" 404 49 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:01:30 +0000] "PUT /api/v1/users/8 HTTP/1.1" 200 218 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:38:45 +0000] "PUT /api/v1/users/8 HTTP/1.1" 200 239 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:38:54 +0000] "DELETE /api/v1/users/8 HTTP/1.1" 500 113 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:39:26 +0000] "DELETE /api/v1/users/8 HTTP/1.1" 500 113 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:42:14 +0000] "DELETE /api/v1/users/8 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:42:28 +0000] "DELETE /api/v1/users/8 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:42:39 +0000] "DELETE /api/v1/users/9 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:42:48 +0000] "DELETE /api/v1/users/10 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:42:58 +0000] "GET /api/v1/users/ HTTP/1.1" 200 578 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:43:17 +0000] "DELETE /api/v1/users/7 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:44:13 +0000] "GET /api/v1/users/ HTTP/1.1" 200 406 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:44:19 +0000] "DELETE /api/v1/users/7 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:44:25 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:44:32 +0000] "GET /api/v1/users/ HTTP/1.1" 200 234 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:44:41 +0000] "DELETE /api/v1/users/4 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:46:43 +0000] "DELETE /api/v1/users/ HTTP/1.1" 404 47 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:46:49 +0000] "DELETE /api/v1/users/10 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:46:53 +0000] "GET /api/v1/users/ HTTP/1.1" 200 234 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:51:01 +0000] "DELETE /api/v1/users/10 HTTP/1.1" 200 60 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:10:56:39 +0000] "DELETE /api/v1/users/10 HTTP/1.1" 404 48 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:18:12 +0000] "DELETE /api/v1/users/10 HTTP/1.1" 404 48 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:22:51 +0000] "GET /api/v1/users/3 HTTP/1.1" 500 90 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:23:20 +0000] "GET /api/v1/users/3 HTTP/1.1" 200 106 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:24:23 +0000] "GET /api/v1/users/3 HTTP/1.1" 200 106 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:26:32 +0000] "GET /api/v1/users/3 HTTP/1.1" 200 106 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:26:37 +0000] "GET /api/v1/users/1 HTTP/1.1" 200 293 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:27:42 +0000] "GET /api/v1/users/1 HTTP/1.1" 200 235 "-" "PostmanRuntime/7.39.0"
+
+info: ::1 - - [12/Jul/2024:11:27:50 +0000] "GET /api/v1/users/2 HTTP/1.1" 404 48 "-" "PostmanRuntime/7.39.0"
+
